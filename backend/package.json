@@ -1,7 +1,7 @@
 {
   "scripts": {
     "script": "hardhat run scripts/LocalDeploy.ts",
-    "deploy": "hardhat run scripts/Deploy.ts",
+    "deploy": "hardhat run scripts/deploy.ts",
     "accounts": "hardhat accounts",
     "compile": "hardhat compile",
     "generate": "hardhat run scripts/GenerateAccount.ts"
