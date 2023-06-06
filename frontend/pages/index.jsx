@@ -6,9 +6,7 @@ export default function Home() {
         <nav className="p-4 border-black flex justify-end fixed w-full">
           <ConnectButton></ConnectButton>
         </nav>
-        <main className="h-full flex items-center justify-center">
-          <h1 className="font-mono text-5xl">Cool UI Here</h1>
-        </main>
+        <main className="h-full flex items-center justify-center"></main>
       </div>
     </>
   );
