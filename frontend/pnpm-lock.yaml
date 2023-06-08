@@ -11,6 +11,7 @@ specifiers:
   autoprefixer: ^10.4.14
   eslint: 8.36.0
   eslint-config-next: 13.2.4
+  ethers: ^5.4.7
   framer-motion: ^10.12.16
   next: 13.1.2
   postcss: ^8.4.24
@@ -26,14 +27,15 @@ dependencies:
   '@emotion/react': 11.11.0_react@18.2.0
   '@emotion/styled': 11.11.0_s2jwwd4ifzjofup7sguc5tked4
   '@mui/material': 5.13.4_uezof7ypth34kbjqel6r5qrdpu
-  '@rainbow-me/rainbowkit': 0.12.14_teh62ombd3miywoj4ttkyih4qe
+  '@rainbow-me/rainbowkit': 0.12.14_6sit52xmhy2curwsdbfxissjmi
   alchemy-sdk: 2.9.0
+  ethers: 5.7.2
   framer-motion: 10.12.16_biqbaboplfbrettd7655fr4n2y
   next: 13.1.2_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   reactstrap: 9.1.10_biqbaboplfbrettd7655fr4n2y
-  wagmi: 0.12.13_biqbaboplfbrettd7655fr4n2y
+  wagmi: 0.12.13_n2cgurg25g7cgftjzlbstkeb2y
 
 devDependencies:
   autoprefixer: 10.4.14_postcss@8.4.24
@@ -2204,7 +2206,7 @@ packages:
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
     dev: false
 
-  /@rainbow-me/rainbowkit/0.12.14_teh62ombd3miywoj4ttkyih4qe:
+  /@rainbow-me/rainbowkit/0.12.14_6sit52xmhy2curwsdbfxissjmi:
     resolution: {integrity: sha512-G7/uYl6TrDS7eiQauc5GEWQ09wCV91hs7xZqj3Af1wsLmbnJM2paUEMs0NI4rbvw0yiMkfoNYMZ2Wfl7NQLKaA==}
     engines: {node: '>=12.4'}
     peerDependencies:
@@ -2217,11 +2219,12 @@ packages:
       '@vanilla-extract/dynamic': 2.0.2
       '@vanilla-extract/sprinkles': 1.5.0_@vanilla-extract+css@1.9.1
       clsx: 1.1.1
+      ethers: 5.7.2
       qrcode: 1.5.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       react-remove-scroll: 2.5.4_react@18.2.0
-      wagmi: 0.12.13_biqbaboplfbrettd7655fr4n2y
+      wagmi: 0.12.13_n2cgurg25g7cgftjzlbstkeb2y
     transitivePeerDependencies:
       - '@types/react'
     dev: false
@@ -2647,7 +2650,7 @@ packages:
         optional: true
     dev: false
 
-  /@wagmi/connectors/0.3.19_yd4xsl2g7hvrti46q4etwohkry:
+  /@wagmi/connectors/0.3.19_25odkxblfjziwuorg76ess6hpi:
     resolution: {integrity: sha512-1EnVdNjP5dAfWoW8dlUDZS+Lva8MYabWK+vwzSUBeSyJcAslXInoiHLb+cz9p8oAAqXspcPLRX3XPErYav23gA==}
     peerDependencies:
       '@wagmi/core': '>=0.9.x'
@@ -2663,11 +2666,12 @@ packages:
       '@ledgerhq/connect-kit-loader': 1.0.2
       '@safe-global/safe-apps-provider': 0.15.2
       '@safe-global/safe-apps-sdk': 7.11.0
-      '@wagmi/core': 0.10.11_react@18.2.0
+      '@wagmi/core': 0.10.11_ethers@5.7.2+react@18.2.0
       '@walletconnect/ethereum-provider': 2.7.2_gft74yegowi6ldcnoyni4czcde
       '@walletconnect/legacy-provider': 2.0.0
       '@web3modal/standalone': 2.4.3_react@18.2.0
       abitype: 0.3.0
+      ethers: 5.7.2
       eventemitter3: 4.0.7
     transitivePeerDependencies:
       - '@react-native-async-storage/async-storage'
@@ -2681,7 +2685,7 @@ packages:
       - zod
     dev: false
 
-  /@wagmi/core/0.10.11_react@18.2.0:
+  /@wagmi/core/0.10.11_ethers@5.7.2+react@18.2.0:
     resolution: {integrity: sha512-WOmG2RG65U6i+p09/aFztFSLPCeC+CYnkPh+OXrxQ8Q3m829983sH7xUTRbFAl561lRevUHmB+XS/na+Oj2bYQ==}
     peerDependencies:
       ethers: '>=5.5.1 <6'
@@ -2691,8 +2695,9 @@ packages:
         optional: true
     dependencies:
       '@wagmi/chains': 0.2.22
-      '@wagmi/connectors': 0.3.19_yd4xsl2g7hvrti46q4etwohkry
+      '@wagmi/connectors': 0.3.19_25odkxblfjziwuorg76ess6hpi
       abitype: 0.3.0
+      ethers: 5.7.2
       eventemitter3: 4.0.7
       zustand: 4.3.8_react@18.2.0
     transitivePeerDependencies:
@@ -6749,7 +6754,7 @@ packages:
       use-sync-external-store: 1.2.0_react@18.2.0
     dev: false
 
-  /wagmi/0.12.13_biqbaboplfbrettd7655fr4n2y:
+  /wagmi/0.12.13_n2cgurg25g7cgftjzlbstkeb2y:
     resolution: {integrity: sha512-1J+F68MztodPUo2OIFImiC3OoZD4gdryxTidfwQz9LJawXdBNmAOFvq0LQClrrqgFk0Gd3EoLo/MKGiEn2RsMg==}
     peerDependencies:
       ethers: '>=5.5.1 <6'
@@ -6762,8 +6767,9 @@ packages:
       '@tanstack/query-sync-storage-persister': 4.29.11
       '@tanstack/react-query': 4.29.12_biqbaboplfbrettd7655fr4n2y
       '@tanstack/react-query-persist-client': 4.29.12_5zxkwxlztchfmgne6tp4irt2zy
-      '@wagmi/core': 0.10.11_react@18.2.0
+      '@wagmi/core': 0.10.11_ethers@5.7.2+react@18.2.0
       abitype: 0.3.0
+      ethers: 5.7.2
       react: 18.2.0
       use-sync-external-store: 1.2.0_react@18.2.0
     transitivePeerDependencies:
