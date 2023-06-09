@@ -12,8 +12,10 @@ export default function Home() {
         <main className="h-full flex items-center justify-center">
           <div className="container mx-auto p-4 border-2 h-[75%] flex flex-col space-y-4">
             <Contract />
-            <ReadContract />
-            <WriteContract />
+            <div className="flex">
+              <ReadContract />
+              <WriteContract />
+            </div>
           </div>
         </main>
       </div>

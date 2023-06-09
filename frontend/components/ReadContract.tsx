@@ -4,9 +4,10 @@ import type { Address } from "wagmi";
 import { useContractRead } from "wagmi";
 import * as lotteryJson from "../abi/Lottery.json";
 import { ethers } from "ethers";
+import { useBlockNumber } from "wagmi";
 
 const lotteryContract = {
-  address: "0xCbB4197d5B7d6aDbD76269783FEbF98CDCe6e941",
+  address: "0x9492D89Afa756fB89E4E9a5D92B43DF06DB83374",
   abi: lotteryJson.abi,
 };
 
@@ -28,18 +29,37 @@ const ReadContract = () => {
     ...lotteryContract,
     functionName: "purchaseRatio",
   });
+  const { data: closingTime } = useContractRead({
+    ...lotteryContract,
+    functionName: "betsClosingTime",
+    watch: true,
+  });
+  const { data: blockNumber } = useBlockNumber({ watch: true });
+
+  const currentBlockDate = new Date(blockNumber * 1000);
 
   const BET_FEE = betFee?.toString().slice(0, 2);
   const PURCHASE_RATIO = purchaseRatio?.toString();
 
-  console.log(betsOpen);
+  const blockClosingTme = closingTime?.toString();
+
   return (
     <>
-      <h1 className="text-2xl">ReadContract</h1>
-      <h2>The owner of this contract is {owner}</h2>
-      <h2>Bets are currently {betsOpen ? "open" : "closed"}</h2>
-      {<h2>The bet fee is {BET_FEE} %</h2>}
-      {<h2>The purchase ratio is {PURCHASE_RATIO}</h2>}
+      <div className="max-w-[50%] space-y-3">
+        <h1 className="text-2xl">Read-Contract</h1>
+        <h2>The owner of this contract is: {owner}</h2>
+        <h2>Bets are currently {betsOpen ? "open" : "closed"}</h2>
+        {<h2>The bet fee is {BET_FEE} %</h2>}
+        {<h2>The purchase ratio is {PURCHASE_RATIO}</h2>}
+        {<h2>CurrentBlock: {blockNumber}</h2>}
+        {<h2>Block Closing bets: {blockClosingTme}</h2>}
+        {/* {<h2>Block closing Time {closingTime}</h2>} */}
+        {
+          <h2>
+            The Last block was mined at {currentBlockDate.toLocaleTimeString()}
+          </h2>
+        }
+      </div>
 
       {/* <h2>The prize pool is {prizePool?}</h2> */}
     </>

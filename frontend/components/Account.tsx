@@ -24,13 +24,10 @@ const Contract = () => {
   const { data: balance } = useBalance({
     address: address,
   });
-  const { data: blockNumber } = useBlockNumber({
-    watch: true,
-  });
 
   return (
     <>
-      <div className="border-2">
+      <div className="">
         <div>
           {isMounted ? (
             address && <p className="text-2xl">Your address: {address}</p>
@@ -39,15 +36,12 @@ const Contract = () => {
           )}
         </div>
       </div>
-      <div className="border-2">
+      <div className="">
         {isMounted ? (
           balance && <p>Balance: {balance?.formatted}</p>
         ) : (
           <p>Loading...</p>
         )}
-      </div>
-      <div className="border-2">
-        <p>Block Number: {blockNumber?.toString()}</p>
       </div>
     </>
   );
